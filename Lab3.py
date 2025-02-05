@@ -168,8 +168,14 @@ def scientificcalculator():
             print(f'Current Result: {result}\n\nCalculator Menu\n---------------\n0. Exit Program\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n5. Exponentiation\n6. Logarithm\n7. Display Average\n')
         menuSelection = int(input('Enter Menu Selection: '))
         if menuSelection == 1 or menuSelection == 2 or menuSelection == 3 or menuSelection == 4 or menuSelection == 5 or menuSelection == 6:
-            firstOperand = float(input('Enter first operand: '))
-            secondOperand = float(input('Enter second operand: '))
+            firstOperand = (input('Enter first operand: '))
+            secondOperand = (input('Enter second operand: '))
+            if firstOperand == "RESULT":
+                firstOperand = result
+            if secondOperand == "RESULT":
+                secondOperand = result
+            firstOperand = float(firstOperand)
+            secondOperand = float(secondOperand)
             if menuSelection == 1:
                 result = firstOperand+secondOperand
             if menuSelection == 2:
